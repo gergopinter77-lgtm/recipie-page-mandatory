@@ -710,7 +710,6 @@ svg[data-category=snacks] {
 .footer {
     display: flex;
     justify-content: center;
-    position: relative;
     background-color: var(--primary-color);
     margin: 0;
     color: var(--background-color-dark);
@@ -1113,7 +1112,7 @@ svg[data-category=snacks] {
     width: var(--width-12col);
     height: fit-content;
     display: grid;
-    grid-template-columns: 1;
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 130px auto;
     gap: var(--grid-gap);
     box-sizing: border-box;
@@ -1128,10 +1127,11 @@ svg[data-category=snacks] {
     margin: 70px 0 0 0;
     font-size: 37px;
     text-transform: uppercase;
-    font-weight: 900
+    font-weight: 900;
 }
 
 .instructions-text {
+    grid-column: 1 / span 8;
     color: var(--background-color-light);
     margin:  0 0 0 15px;
     font-size: 14px;
@@ -1147,6 +1147,168 @@ svg[data-category=snacks] {
     margin: 0 0 26px 0;
 }
 
+.instructions-img {
+    grid-column: 9 / span 3;
+}
 
+.our-team {
+    width: var(--width-12col);
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 130px auto;
+    gap: var(--grid-gap);
+    box-sizing: border-box;
+    margin: 0 auto;
+}
 
+.our-team-headline {
+    width: 100%;
+    color: var(--background-color-light);
+    height: 45px;
+    border-bottom: 1px solid var(--background-color-light);
+    margin: 70px 0 0 0;
+    font-size: 37px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
 
+.out-team-content-block-image img {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.our-team-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-gap);
+    height: fit-content;
+    width: var(--width-12col);
+    box-sizing: border-box;
+    margin: 0 0 15px 0;
+}
+
+.our-team-content-block {
+    background-color: var(--background-color-light);
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.our-team-content-block-text {
+    padding: 20px;
+    color: var(--color_black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.our-team-content-block-name {
+    display: flex;
+    justify-content: center;
+}
+
+.our-team-content-block-position {
+    display: flex;
+    align-items: center;
+}
+
+.our-team-content-block-position svg {
+    margin-right: 15px;
+}
+
+.our-team-conent-block-number {
+    display: flex;
+    align-items: center;
+}
+
+.our-team-conent-block-number svg {
+    margin-right: 15px;
+}
+.our-team-conent-block-email {
+    display: flex;
+    align-items: center;
+}
+.our-team-conent-block-email svg {
+    margin-right: 15px;
+}
+
+.our-team-content-block-text h5 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.our-team-content-block-text p {
+    font-size: 16px;
+}
+
+.our-team-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-gap);
+    height: fit-content;
+    width: var(--width-12col);
+    box-sizing: border-box;
+    margin: 0 0 15px 0;
+}
+
+.comment-area {
+    width: var(--width-12col);
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 130px auto;
+    gap: var(--grid-gap);
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.comment-area-headline {
+    width: 100%;
+    color: var(--background-color-light);
+    height: 45px;
+    border-bottom: 1px solid var(--background-color-light);
+    margin: 70px 0 0 0;
+    font-size: 37px;
+    text-transform: uppercase;
+    font-weight: 900; 
+}
+
+.comment-area-comment-box {
+    display: flex;
+    justify-content: center;
+}
+
+.comment-area-comment-box textarea   {
+    width: 800px;
+    height: 500px;
+    padding: 10px 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    background-color: var(--color_black);
+    border: 1px solid var(--color-gray);
+    border-radius: 20px;
+}
+
+.comment-area-button {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 200px 10px 0 ;
+}
+
+.comment-area-button button {
+    background-color: var(--color_black);
+    border: 1px solid var(--color-gray);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 12px;
+    color: var(--background-color-light);
+    text-transform: uppercase;
+}
