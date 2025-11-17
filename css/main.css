@@ -5,6 +5,7 @@
     --width-full: 100%;
     --width-12col: 1200px;
 
+
     /* grid settings */
     --grid-gap: 10px;
     --padding-default: 20px;
@@ -48,7 +49,7 @@ html {
     width: var(--width-full);
 }
 
-.todays_recipes, .categories, .content-area {
+.todays_recipes, .categories, .content-area, .allstar, .footer {
     width: var(--width-12col);
 }
 
@@ -90,7 +91,6 @@ html {
     text-decoration: none;
     color: var(--background-color-light);
     text-transform: uppercase;
-
 }
 
 .menu-container ul li {
@@ -438,6 +438,7 @@ svg[data-category=snacks] {
     background-image: url("https://picsum.photos/1200/600");
     min-height: 400px;
     height: auto;
+    width: var(--width-full);
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -453,7 +454,6 @@ svg[data-category=snacks] {
     width: var(--width-12col);
     height: fit-content;
     display: flex;
-    width: var(--width-12col);
     align-self: center;
     justify-content: flex-end;
     height: 100%;
@@ -710,6 +710,8 @@ svg[data-category=snacks] {
 .footer {
     display: flex;
     justify-content: center;
+    position: relative;
+    width: var(--width-full);
     background-color: var(--primary-color);
     margin: 0;
     color: var(--background-color-dark);
@@ -1312,3 +1314,111 @@ svg[data-category=snacks] {
     color: var(--background-color-light);
     text-transform: uppercase;
 }
+
+/*phone*/
+
+
+@media (width<400px) {
+    :root {
+        /* dimensions */
+    --width-full: 100%;
+    --width-12col: 400px;
+    }   
+
+    .navigation {
+        width: 400px;
+    }
+
+    .menu-container{
+        margin-left: 65px;
+    }
+
+    .search-box {
+        grid-column: 2 / span 3;
+    }
+
+    .hero-text {
+        grid-column: 2 / span 9;
+    }
+
+    .hero-text p {
+        grid-column: 2 /span 7;
+    } 
+
+
+    .category_select_block {
+        flex-direction: column;
+        width: 30%;
+        justify-self: center;
+    }
+
+    .search-box {
+        width: 200px;
+    }
+
+    .allstar-container {
+        justify-content: center;
+    }
+
+    .todays_recipes_content {
+       grid-template-columns: repeat(1, 1fr);
+       width: 80%;
+       justify-self: center;
+    }
+
+
+
+    .inthekitchen_plating_block {
+        padding: 15px;
+        width: 400px;
+    }
+    .inthekitchen_plating_content_block {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    .inthekitchen_plating_img {
+        display: none;
+    }
+
+    .inthekitchen_recipe_block {
+        padding: 10px;
+    }
+    .inthekitchen_recipe_img {
+        display: none;
+    }
+
+    .inthekitchen_meats_block {
+        padding: 15px;
+    }
+
+    .hero-searchpage {
+        min-height: 800px;
+    }
+
+    .search-box-searchpage {
+        grid-column: 2 / span 3;
+    }
+
+    .fullsearch-headline {
+        width: 200px;
+    }
+
+    .filter-category-checkbox {
+        grid-row: 3;
+        grid-column: 2 / span 10;
+    }
+
+    .search-box-searchpage {
+        width: 200px;
+    }
+
+    .footer {
+        display: none;
+    }
+
+}
+
+
