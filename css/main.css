@@ -1366,12 +1366,15 @@ svg[data-category=snacks] {
        justify-self: center;
     }
 
-
+    .inthekitchen_recipe_block {
+        padding: 10;
+    }
 
     .inthekitchen_plating_block {
         padding: 15px;
         width: 400px;
     }
+
     .inthekitchen_plating_content_block {
         display: flex;
         flex-direction: column;
@@ -1413,6 +1416,32 @@ svg[data-category=snacks] {
 
     .search-box-searchpage {
         width: 200px;
+    }
+
+    .our-team-headline {
+        font-size: 80%;
+    }
+
+    .our-team-content {
+        grid-template-columns: repeat(1, 1fr);
+       justify-self: center;
+       width: 80%;
+    }
+
+    .our-team-2 {
+         grid-template-columns: repeat(1, 1fr);
+       justify-self: center;
+       width: 80%;  
+    }
+
+    .comment-area-comment-box textarea {
+        width: 320px;
+        height: 100px;
+    }
+
+    .comment-area-button {
+        justify-self: center;
+        padding: 0;
     }
 
     .footer {
